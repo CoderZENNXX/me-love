@@ -24,11 +24,28 @@ const CoupleAnimation = () => {
                     navigate("/romanticAnimation", {
                         state: {
                             userInitial,
-                            partnerInitial,
-                            animationStyle
+                            partnerInitial
                         }
                     });
                 }
+            }
+
+            else if (animationStyle === "flower") {
+                navigate("/flowerAnimation", {
+                    state: {
+                        userInitial,
+                        partnerInitial
+                    }
+                });
+            }
+
+            else {
+                navigate("/kissAnimation", {
+                    state: {
+                        userInitial,
+                        partnerInitial
+                    }
+                })
             }
         }   
     };

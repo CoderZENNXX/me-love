@@ -4,6 +4,8 @@ import Home from "./Home";
 import LoveQuote from "./LoveQuote";
 import CoupleAnimation from "./CoupleAnimation";
 import FullAnimation from "./FullAnimation";
+import FlowerAnimation from "./FlowerAnimation";
+import KissAnimation from "./KissAnimation";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route path="/loveQuote" element={<LoveQuote/>}/>
             <Route path="/coupleAnimation" element={<CoupleAnimation/>}/>
             <Route path="/romanticAnimation" element={<FullAnimation></FullAnimation>}/>
+            <Route path="/flowerAnimation" element={<FlowerAnimation></FlowerAnimation>}/>
+            <Route path="/kissAnimation" element={<KissAnimation></KissAnimation>}/>
           </Routes>
         </div>
       </div>
