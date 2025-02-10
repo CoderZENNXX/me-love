@@ -118,6 +118,12 @@
   font-size: 20px;
 }
 
+.choose-animation-style .no-animation-text {
+  font-family: monospace;
+  font-size: 15px;
+  color: red;
+}
+
 .choose-animation-style .animation-button {
   width: 200px;
   margin-bottom: 10px;
@@ -144,7 +150,7 @@
 
 /* Romatic */
 .full-animation {
-  background-image: url(/background-images/romantic-animation-background-image.jpg);
+  background-image: url(/background-images/romantic-animation-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -163,14 +169,59 @@
   color: rgb(120, 30, 90);
 }
 
-.full-animation .first-initial-animation {
-  margin-left: 400px;
-  margin-top: 320px;
+@media (max-width: 1700px) {
+  .full-animation .first-initial-animation {
+    margin-left: 500px;
+    margin-top: 410px;
+  }
+  .full-animation .partner-initial-animation {
+    margin-left: 1050px;
+    margin-top: -290px;
+  }
 }
 
-.full-animation .partner-initial-animation {
-  margin-left: 1000px;
-  margin-top: -280px;
+@media (max-width: 1600px) {
+  .full-animation .first-initial-animation {
+    margin-left: 430px;
+    margin-top: 400px;
+  }
+  .full-animation .partner-initial-animation {
+    margin-left: 950px;
+    margin-top: -290px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .full-animation .first-initial-animation {
+    margin-left: 360px;
+    margin-top: 390px;
+  }
+  .full-animation .partner-initial-animation {
+    margin-left: 950px;
+    margin-top: -290px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .full-animation .first-initial-animation {
+    margin-left: 340px;
+    margin-top: 360px;
+  }
+  .full-animation .partner-initial-animation {
+    margin-left: 900px;
+    margin-top: -280px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .full-animation .first-initial-animation {
+    margin-left: 350px;
+    margin-top: 280px;
+  }
+  .full-animation .partner-initial-animation {
+    margin-left: 800px;
+    margin-top: -280px;
+  }
 }
 
 button:not(.quote-back-arrow, .animation-back-arrow), a, .home .explaination {

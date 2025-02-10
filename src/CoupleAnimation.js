@@ -1,22 +1,36 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useRef } from "react";
 
 const CoupleAnimation = () => {
     const navigate = useNavigate();
     const [userInitial, setUserInitial] = useState('');
     const [partnerInitial, setPartnerInitial] = useState('');
     const [animationStyle, setAnimationStyle] = useState('');
+    const firstInitial = useRef();
+    const secondInitial = useRef();
+
+    const screenRatioRef = useRef(null)
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
 
     const handleSubmit = () => {
-        if (animationStyle === "romantic") {
-            navigate("/romanticAnimation", {
-                state: {
-                    userInitial,
-                    partnerInitial,
-                    animationStyle
+        if (firstInitial.current.value && secondInitial.current.value) {
+            if (animationStyle === "romantic") {
+                if (screenWidth < 1200 || screenWidth > 2000 || screenHeight < 600 || screenHeight > 1000) {
+                    screenRatioRef.current.innerText = "Device is not compatible with animation!!"
                 }
-            });
-        }
+                else {
+                    navigate("/romanticAnimation", {
+                        state: {
+                            userInitial,
+                            partnerInitial,
+                            animationStyle
+                        }
+                    });
+                }
+            }
+        }   
     };
 
     return (
@@ -28,6 +42,7 @@ const CoupleAnimation = () => {
                 <div className="get-couple-animation">
                     <label>Your Initial:</label>
                     <input
+                        ref={firstInitial}
                         type="text"
                         maxLength={1}
                         value={userInitial}
@@ -36,6 +51,7 @@ const CoupleAnimation = () => {
                     />
                     <label>Partner's Initial:</label>
                     <input
+                        ref={secondInitial}
                         type="text"
                         maxLength={1}
                         value={partnerInitial}
@@ -46,6 +62,7 @@ const CoupleAnimation = () => {
             </div>
 
             <div className="choose-animation-style">
+                <h2 ref={screenRatioRef} className="no-animation-text"></h2>
                 <button className="animation-button" onClick={handleSubmit}>
                     Start Animation
                 </button>

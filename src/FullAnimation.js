@@ -34,9 +34,9 @@ const FullAnimation = () => {
                 <motion.div
                     key={emoji.id}
                     initial={{ y: '-2000%', opacity: emoji.opacity, fontSize: emoji.fontSize }}
-                    animate={{ y: '95%', opacity: emoji.opacity, fontSize: emoji.fontSize }}
+                    animate={{ y: '900%', opacity: emoji.opacity, fontSize: emoji.fontSize }}
                     transition={{
-                        duration: 5,
+                        duration: 4,
                         repeat: Infinity, // Repeat animation infinitely
                         delay: emoji.delay
                     }}
@@ -50,6 +50,7 @@ const FullAnimation = () => {
                         🌸 ❤️‍🔥
                 </motion.div>
             ))}
+            
 
             <motion.h2
                 className="first-initial-animation animation"
@@ -74,7 +75,7 @@ const FullAnimation = () => {
                 layout
                 initial={{ fontSize: '250px' }}
                 animate={{
-                    fontSize: ['250px', '230px', '250px'], // Loop between 50px and 70px
+                    fontSize: ['250px', '240px', '250px'], // Loop between 50px and 70px
                 }}
                 transition={{
                     duration: 3,  // Duration for the size change
