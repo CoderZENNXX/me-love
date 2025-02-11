@@ -6,6 +6,7 @@ import { useState } from 'react';
 const FlowerAnimation = () => {
     const location = useLocation();
     const { userInitial, partnerInitial} = location.state || {};
+    const screenWidth = window.innerWidth;
 
     const [emojis, setEmojis] = useState([]);
 
@@ -34,7 +35,7 @@ const FlowerAnimation = () => {
                 <motion.div
                     key={emoji.id}
                     initial={{ y: '-2000%', opacity: emoji.opacity, fontSize: emoji.fontSize }}
-                    animate={{ y: '500%', opacity: emoji.opacity, fontSize: emoji.fontSize }}
+                    animate={{ y: '400%', opacity: emoji.opacity, fontSize: emoji.fontSize }}
                     transition={{
                         duration: 6,
                         repeat: Infinity, // Repeat animation infinitely
@@ -55,9 +56,9 @@ const FlowerAnimation = () => {
             <motion.h2
                 className="first-initial-flower-animation initial-flower-animation"
                 layout
-                initial={{ fontSize: '300px' }}
+                initial={{ fontSize: screenWidth > 800 ? '300px' : screenWidth > 500 ? "135px" : "80px"}}
                 animate={{
-                    fontSize: ['300px', '280px', '300px'], // Loop between 50px and 70px
+                    fontSize: screenWidth > 800 ? ['300px', '280px', '300px'] : screenWidth > 500 ? ["135px", "105px", "135px"] : ["80px", "60px", "80px"], // Loop between 50px and 70px
                 }}
                 transition={{
                     duration: 3,  // Duration for the size change
@@ -75,9 +76,9 @@ const FlowerAnimation = () => {
             <motion.h2
                 className="partner-initial-flower-animation initial-flower-animation"
                 layout
-                initial={{ fontSize: '300px' }}
+                initial={{ fontSize: screenWidth > 800 ? '300px' : screenWidth > 500 ? "135px" : "80px"}}
                 animate={{
-                    fontSize: ['300px', '280px', '300px'], // Loop between 50px and 70px
+                    fontSize: screenWidth > 800 ? ['300px', '280px', '300px'] : screenWidth > 500 ? ["135px", "105px", "135px"] : ["80px", "60px", "80px"], // Loop between 50px and 70px
                 }}
                 transition={{
                     duration: 3,  // Duration for the size change

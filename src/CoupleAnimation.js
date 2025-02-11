@@ -17,7 +17,7 @@ const CoupleAnimation = () => {
     const handleSubmit = () => {
         if (firstInitial.current.value && secondInitial.current.value) {
             if (animationStyle === "romantic") {
-                if (screenWidth < 1200 || screenWidth > 2000 || screenHeight < 600 || screenHeight > 1000) {
+                if (screenWidth < 1200 || screenWidth > 2000 || screenHeight < 400 || screenHeight > 1000) {
                     screenRatioRef.current.innerText = "Device is not compatible with animation!!"
                 }
                 else {

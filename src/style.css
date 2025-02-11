@@ -30,7 +30,7 @@
   padding: 30px;
   margin: 20px 0;
   overflow-wrap: anywhere;
-  font-size: 57px;
+  font-size: 35px;
 }
 
 .home .love-quote-link .explaination {
@@ -58,6 +58,17 @@
   position: relative;
   height: 200px;
   font-size: 25px;
+
+  background: linear-gradient(175deg, rgba(255,255,255,1) 17%, rgba(152,226,255,1) 70%);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 .love-quote .get-quote {
@@ -67,44 +78,39 @@
 }
 
 .love-quote .random-quote {
+  font-size: 35px;
+  margin-left: 25px;
   text-align: center;
 }
 
 .love-quote .get-quote .random-quote-button {
-  position: fixed;
+  position: relative;
   text-align: center;
   width: 200px;
-  margin-top: 400px;
+  margin-top: 250px;
   font-size: 30px;
+  color: black;
 }
 
-.love-quote .author{
+.love-quote .author-tayzar {
   font-family: "Times New Roman";
   color: darkgray;
-  margin-left: 280px;
-  font-size: 15px;
-}
-
-.love-quote .by-me-love {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-left: 230px;
+  font-size: 12px;
 }
 
 .choose-quote-language {
   position: relative;
   text-align: center;
-  margin-top: 290px;
+  margin-top: 500px;
   font-size: 30px;
+  height: fit-content;
 }
 
-.choose-animation-style {
-  position: relative;
-  text-align: center;
-  margin-top: 310px;
-  font-size: 30px;
-}
-
-.choose-animation-style label {
-  padding-right: 20px;
+.couple-animation {
+  margin-left: 600px;
+  width: 800px;
 }
 
 .couple-animation .get-couple-animation {
@@ -119,10 +125,26 @@
   font-size: 20px;
 }
 
+.choose-animation-style {
+  position: relative;
+  text-align: center;
+  margin-top: 310px;
+  font-size: 30px;
+}
+
+.choose-animation-style label {
+  padding-right: 20px;
+}
+
+.choose-animation-style {
+  width: 40%;
+}
+
 .choose-animation-style .no-animation-text {
   font-family: monospace;
   font-size: 15px;
   color: red;
+  margin-bottom: 30px;
 }
 
 .choose-animation-style .animation-button {
@@ -133,11 +155,12 @@
 
 .quote-back-arrow-div, .animation-back-arrow-div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .quote-back-arrow-div .quote-back-arrow, .animation-back-arrow-div .animation-back-arrow {
-  margin-right: 400px;
+  position: relative;
+  margin-right: 850px;
   font-size: 20px;
   color: black;
   background: none;
@@ -147,6 +170,10 @@
 
 .quote-back-arrow-div .quote-back-arrow:hover, .animation-back-arrow-div .animation-back-arrow:hover {
   color: red;
+}
+
+.quote-back-arrow-div .quote-back-arrow {
+  margin-right: 950px;
 }
 
 /* Romatic */
@@ -167,7 +194,7 @@
 .full-animation .animation {
   font-family: "Pinyon Script", serif;
   font-weight: 500;
-  color: rgb(120, 30, 90);
+  color: rgb(100, 0, 0);
 }
 
 @media (max-width: 1700px) {
@@ -225,6 +252,19 @@
   }
 }
 
+.flower-animation {
+  background: linear-gradient(175deg, rgba(255, 179, 0, 0.7)0%, rgb(255, 210, 210) 35%);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 .flower-animation .first-initial-flower-animation {
   /* font-family: "Times New Roman"; */
   position: fixed;
@@ -253,8 +293,75 @@
   padding-right: 5%;
 }
 
-.flower-animation {
-  background: linear-gradient(175deg, rgba(255, 179, 0, 0.7)0%, rgb(255, 210, 210) 35%);
+@media (max-width: 1300px) {
+  .flower-animation .first-initial-flower-animation {
+    margin-left: 15%;
+  }
+  .flower-animation .partner-initial-flower-animation {
+    margin-left: 70%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .flower-animation .give-heart-present {
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .flower-animation .first-initial-flower-animation {
+    margin-left: 5%;
+  }
+  .flower-animation .give-heart-present {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 900px) {
+  .flower-animation .give-heart-present {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 800px) {
+  .flower-animation .first-initial-flower-animation {
+    font-size: 135px;
+    margin-top: 35%;
+  }
+  .flower-animation .give-heart-present {
+    font-size: 135px;
+    margin-left: 35%;
+    margin-top: 28%;
+  }
+  .flower-animation .partner-initial-flower-animation {
+    font-size: 135px;
+    margin-top: 35%;
+  }
+}
+
+@media (max-width: 700px) {
+  .flower-animation .give-heart-present {
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 500px) {
+  .flower-animation .first-initial-flower-animation {
+    font-size: 80px;
+    margin-left: 5%;
+  }
+  .flower-animation .give-heart-present {
+    font-size: 80px;
+    margin-left: 35%;
+  }
+  .flower-animation .partner-initial-flower-animation {
+    font-size: 80px;
+    margin-left: 70%;
+  }
+}
+
+.kiss-animation {
+  background: linear-gradient(175deg, rgb(255, 210, 210) 20%, rgb(254, 100, 100) 100%);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -264,6 +371,108 @@
   bottom: 0;
   width: 100%;
   height: 100vh;
+}
+
+.kiss-animation .first-initial-kiss-animation {
+  /* font-family: "Times New Roman"; */
+  position: fixed;
+  font-family: "Pinyon Script", serif;
+  margin-left: 23%;
+  margin-top: 10%;
+  padding-right: 5%;
+  color: red;
+}
+
+.kiss-animation .biting-lips {
+  position: fixed;
+  font-size: 300px;
+  margin-left: 40%;
+  margin-top: 3%;
+  text-shadow: 0 0 100px rgba(255, 0, 0, 0.7), /* Outer glow */
+               0 0 100px rgba(255, 0, 221, 0.5); /* Inner soft glow */
+  padding-right: 5%;
+}
+
+.kiss-animation .partner-initial-kiss-animation {
+  /* font-family: "Times New Roman"; */
+  position: fixed;
+  font-family: "Pinyon Script", serif;
+  margin-left: 67%;
+  margin-top: 10%;
+  padding-right: 5%;
+  color: red;
+}
+
+@media (max-width: 1300px) {
+  .kiss-animation .first-initial-kiss-animation {
+    margin-left: 15%;
+  }
+  .kiss-animation .partner-initial-kiss-animation {
+    margin-left: 70%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .kiss-animation .first-initial-kiss-animation {
+    margin-left: 10%;
+  }
+  .kiss-animation .biting-lips {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .kiss-animation .first-initial-kiss-animation {
+    margin-left: 5%;
+  }
+  .kiss-animation .biting-lips {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 900px) {
+  .kiss-animation .biting-lips {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 800px) {
+  .kiss-animation .first-initial-kiss-animation {
+    font-size: 100px;
+    margin-top: 25%;
+    margin-left: 23%;
+  }
+  .kiss-animation .biting-lips {
+    font-size: 100px;
+    margin-left: 40%;
+    margin-top: 20%;
+  }
+  .kiss-animation .partner-initial-kiss-animation {
+    font-size: 100px;
+    margin-top: 25%;
+    margin-left: 65%;
+  }
+}
+
+@media (max-width: 700px) {
+  .kiss-animation .biting-lips {
+    margin-left: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  .kiss-animation .first-initial-kiss-animation {
+    font-size: 80px;
+    margin-left: 5%;
+  }
+  .kiss-animation .biting-lips {
+    font-size: 80px;
+    margin-left: 40%;
+  }
+  .kiss-animation .partner-initial-kiss-animation {
+    font-size: 80px;
+    margin-left: 80%;
+  }
 }
 
 button:not(.quote-back-arrow, .animation-back-arrow), a, .home .explaination {

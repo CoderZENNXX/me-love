@@ -47,7 +47,7 @@ const FullAnimation = () => {
                         pointerEvents: 'none',
                     }}
                 >
-                        ❄️ ❤️‍🔥
+                        ❄️ ❤️
                 </motion.div>
             ))}
             

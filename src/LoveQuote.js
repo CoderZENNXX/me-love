@@ -206,8 +206,10 @@ const LoveQuote = () => {
                             <br/>
                             💕💕
                         </h2>
-                        <pre ref={byAuthorMeLove} className="author by-me-love">Written by Me-Love</pre>
-                        <pre ref={byAuthorTayzar} className="author by-tayzar">(Tayzar)</pre>
+                        <pre ref={byAuthorMeLove} className="author-tayzar">Written by Tayzar 
+                            <br/>
+                            (Me-Love)
+                        </pre>
                         <button ref={getQuoteButton} className="random-quote-button" onClick={handleLanguageChange}>
                             {quoteLanguage === "english"
                             ? "Get English Quote"
